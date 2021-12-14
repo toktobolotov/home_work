@@ -1,11 +1,19 @@
 import 'dart:io';
 
 void main() {
-  List a = [2, 3, 4, 5];
-  List b = [0];
+  print('введите порядковый номер пальца:');
 
-  for (int i = 0; i < a.length; i++) {
-    b += a[i];
+  var a = int.parse(stdin.readLineSync()!);
+
+  if (a == 1) {
+    print('Большой палец');
+  } else if (a == 2) {
+    print('Указательный палец');
+  } else if (a == 3) {
+    print('Средний палец');
+  } else if (a == 4) {
+    print('Безымяный палец');
+  } else if (a == 5) {
+    print('Мизинец');
   }
-  print(b);
 }
