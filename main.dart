@@ -16,4 +16,11 @@ void main() {
   } else if (a == 5) {
     print('Мизинец');
   }
+
+  List b = [2, 3, 4, 5];
+  List c=[1];
+  for (int i = 0; i < b.length; i++) {
+  c*=b   
+  }
+  print(c);
 }
