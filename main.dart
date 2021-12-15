@@ -1,14 +1,15 @@
 import 'dart:io';
 
 void main() {
-  {
-    int i = 10;
-    print('Dart do while loop example');
+  List arr = List.generate(99, (index) => index);
+  List arr2 = [];
 
-    do {
-      print(i);
-      i++;
-    } while (i <= 20);
-    print('the loop is terminated');
+  int i = 0;
+  while (i < arr.length) {
+    if (arr[i].isEven) {
+      arr2.add(arr[i]);
+    }
+    ++i;
   }
+  print(arr2);
 }
