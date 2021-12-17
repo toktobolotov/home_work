@@ -1,15 +1,13 @@
 import 'dart:io';
 
 void main() {
-  List arr = List.generate(99, (index) => index);
-  List arr2 = [];
-
-  int i = 0;
-  while (i < arr.length) {
-    if (arr[i].isEven) {
-      arr2.add(arr[i]);
-    }
-    ++i;
-  }
-  print(arr2);
+  var a = printName2('Ivan', 91);
+  print(a);
 }
+
+StringprintName(String name, int age) {
+  var info = 'My name is $name, age is $age';
+  print(info);
+}
+
+String printName2(String name, int age) => 'My name is $name, age is $age';
