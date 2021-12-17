@@ -1,13 +1,11 @@
 import 'dart:io';
 
 void main() {
-  var a = printName2('Ivan', 91);
-  print(a);
+  List l1 = [1, 2, 4];
+  List l2 = [1, 3, 4];
+  for (int i = 0; i < l1.length; i++) {
+    l2.add(l1[i]);
+  }
+  l2.sort();
+  print(l2);
 }
-
-StringprintName(String name, int age) {
-  var info = 'My name is $name, age is $age';
-  print(info);
-}
-
-String printName2(String name, int age) => 'My name is $name, age is $age';
