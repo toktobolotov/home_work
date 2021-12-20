@@ -1,11 +1,12 @@
-import 'dart:io';
-
 void main() {
-  List l1 = [1, 2, 4];
-  List l2 = [1, 3, 4];
-  for (int i = 0; i < l1.length; i++) {
-    l2.add(l1[i]);
+  var a = amount(4, 4);
+  print(a);
+}
+
+String amount(int a, int b) {
+  if (a == b) {
+    return 'yes';
+  } else {
+    return 'no';
   }
-  l2.sort();
-  print(l2);
 }
