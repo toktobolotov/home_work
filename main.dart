@@ -1,5 +1,17 @@
 void main() {
-  var a = amount(4, 4);
+//   var arr = [1, 2, 5];
+//   var result;
+//   for (int i = 0; i < arr.length; i++) {
+//     if (arr[i] == 5) {
+//       result = 'yes';
+//     } else {
+//       result = 'no';
+//     }
+//   } print(result);
+// ----------------------------надо доделать
+//
+
+  var a = amount(7, 4);
   print(a);
 }
 
