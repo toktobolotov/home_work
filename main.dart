@@ -1,4 +1,38 @@
+import 'dart:io';
+
+import 'dart:math';
+
 void main() {
+  print('загадайте число от 1 до 100');
+  var myNumb = int.parse(stdin.readLineSync()!);
+  var rng = Random();
+  var start = 0, end = 100;
+  var guess = (start + end) ~/ 2;
+  var tries = 1;
+  if (myNumb == guess) {
+    print('Вау, с первой попытки');
+  } else {
+    while (guess != myNumb) {
+      if (myNumb > guess) {
+        print('more than: $guess');
+        guess = rng.nextInt(max(guess, end));
+        tries += 1;
+      } else if (myNumb < guess) {
+        print('less than: $guess');
+        guess = rng.nextInt(max(start, guess));
+        tries += 1;
+      }
+    }
+    print(myNumb);
+    print('from $tries tries guessed');
+  }
+}
+
+//   var rng = new Random();
+
+//   print(rng.nextInt(50));
+// }
+
 //   chislo(null, null);
 // }
 
@@ -9,13 +43,13 @@ void main() {
 //   print(c);
 // }
 // --------------------------------------------------------------
-  word(null);
-}
+//   word(null);
+// }
 
-void word(String? name) {
-  print(name ?? 'error');
-}
-// ------------------------------------------------
+// void word(String? name) {
+//   print(name ?? 'error');
+// }
+// // ------------------------------------------------
 //   arr([
 //     [1, 2, 4],
 //     [4, 5],
@@ -56,4 +90,3 @@ void word(String? name) {
 //   print(c);
 // }
 // --------------------------------------------------------
-
