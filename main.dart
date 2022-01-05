@@ -6,7 +6,7 @@ void main() {
   var rng = Random();
   var progrNumb = rng.nextInt(100);
   var check;
-  var popytka = 0;
+  var popytka = 1;
   while (progrNumb != check) {
     var check = int.parse(stdin.readLineSync()!);
     if (progrNumb > check) {
