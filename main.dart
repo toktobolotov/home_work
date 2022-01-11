@@ -1,13 +1,20 @@
-import 'dart:ffi';
-
-abstract class Exchange_rate {
-  Void calculateRate() {
-    print('');
-  }
+void main() {
+  print('Курс на сегодня');
+  print('Доллар США ')
 }
 
-class USD extends Exchange_rate {
-  int costUsdForSom;
-  num costSomForUsd;
-  USD(this.costUsdForSom, this.costSomForUsd);
-}
+
+
+// import 'dart:ffi';
+
+// abstract class Exchange_rate {
+//   Void calculateRate() {
+//     print('');
+//   }
+// }
+
+// class USD extends Exchange_rate {
+//   int costUsdForSom;
+//   num costSomForUsd;
+//   USD(this.costUsdForSom, this.costSomForUsd);
+// }
