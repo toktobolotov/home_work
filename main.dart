@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Student {
   String? firstName;
   String? lastName;
@@ -33,12 +31,12 @@ class Aspirant extends Student {
 }
 
 void main() {
-  Student Bilal = Student(
+  Student bilal = Student(
       firstName: 'Bilal',
       lastName: 'Toktobolotov',
       group: 'PI-21',
       averageMark: 5);
   Aspirant aspirant = Aspirant(scienceWork: 'on working yet');
   print(aspirant.scienceWork);
-  print(Bilal.getSchoolarship());
+  print(bilal.getSchoolarship());
 }
