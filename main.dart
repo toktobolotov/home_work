@@ -1,15 +1,35 @@
-import 'dart:io';
+class Student {
+  String? firstName;
+  String? lastName;
+  String? group;
+  double? averageMark;
+  Student(
+      {required this.firstName,
+      required this.lastName,
+      required this.group,
+      required this.averageMark});
+
+  String getSchoolarship() {
+    if (averageMark == 5) {
+      return 'сумма стипендии 20000с';
+    } else {
+      return 'Сумма стипендии 0 с';
+    }
+  }
+}
+
+class Aspirant extends Student {
+  String? scienceWork;
+  Aspirant({required this.scienceWork});
+}
 
 void main() {
-  List arr = List.generate(99, (index) => index);
-  List arr2 = [];
-
-  int i = 0;
-  while (i < arr.length) {
-    if (arr[i].isEven) {
-      arr2.add(arr[i]);
-    }
-    ++i;
-  }
-  print(arr2);
+  Student Bilal = Student(
+      firstName: 'Bilal',
+      lastName: 'Toktobolotov',
+      group: 'PI-21',
+      averageMark: 5);
+  // Aspirant aspirant = Aspirant(scienceWork: 'on working yet');
+  // print(aspirant.scienceWork);
+  print(Bilal.getSchoolarship());
 }
