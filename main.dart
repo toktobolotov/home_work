@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 class Student {
   String? firstName;
   String? lastName;
@@ -20,7 +22,14 @@ class Student {
 
 class Aspirant extends Student {
   String? scienceWork;
-  Aspirant({required this.scienceWork});
+  Aspirant(
+      String firstName, String lastName, String group, Double averageMark) {
+    super.firstName;
+    super.lastName;
+    super.group;
+    super.averageMark;
+    this.scienceWork;
+  }
 }
 
 void main() {
@@ -29,7 +38,7 @@ void main() {
       lastName: 'Toktobolotov',
       group: 'PI-21',
       averageMark: 5);
-  // Aspirant aspirant = Aspirant(scienceWork: 'on working yet');
-  // print(aspirant.scienceWork);
+  Aspirant aspirant = Aspirant(scienceWork: 'on working yet');
+  print(aspirant.scienceWork);
   print(Bilal.getSchoolarship());
 }
