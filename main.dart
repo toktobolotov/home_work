@@ -16,6 +16,14 @@ class Student {
       return 'Сумма стипендии 0 с';
     }
   }
+
+  @override
+    if (averageMark == 5) {
+      return 'сумма стипендии 40 000 с';
+    } else {
+      return 'Сумма стипендии 18 000 с';
+    }
+
 }
 
 class Aspirant extends Student {

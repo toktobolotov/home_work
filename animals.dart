@@ -56,9 +56,30 @@ class Cat extends Animal {
   }
 }
 
+class Horse extends Animal {
+  String? name;
+  Horse(String name, String food, String location) {
+    super.food;
+    super.location;
+    this.name;
+  }
+  @override
+  Void makeNoise() {
+    print('iiha');
+  }
+
+  @override
+  Void eat() {
+    print('travku');
+  }
+}
+
 void main() {
   Animal dog = Dog('borbos', 'myaso', 'home');
   Animal cat = Cat('bobr', 'fish', 'home');
+  Animal horse = Horse('tulpar', 'travka', 'djailoo');
+
   print(dog.makeNoise());
   print(cat.eat());
+  print(horse.food);
 }
