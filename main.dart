@@ -1,3 +1,18 @@
+void main() {
+  Worker director =
+      Worker(name: 'Eldiyar', surname: 'Sultankulov', rate: 5000, days: 21);
+
+  Worker driver =
+      Worker(name: 'Rashid', surname: 'Bolotov', rate: 1000, days: 28);
+
+  print(director.getSalary());
+  print(driver.getSalary());
+
+  MyString education = MyString(somewords: 'Hello world!');
+
+  print(education.reverseMethod());
+}
+
 class Worker {
   String? name;
   String? surname;
@@ -17,23 +32,12 @@ class MyString {
 
   MyString({this.somewords});
 
-   String reverseMethod() {
+  String reverseMethod() {
     final input = somewords.split('').reversed.join();
     return input;
-   
-}
+  }
 
-void main() {
-  Worker director =
-      Worker(name: 'Eldiyar', surname: 'Sultankulov', rate: 5000, days: 21);
+  String ucFirst() {}
 
-  Worker driver =
-      Worker(name: 'Rashid', surname: 'Bolotov', rate: 1000, days: 28);
-
-  print(director.getSalary());
-  print(driver.getSalary());
-
-  MyString education = MyString(somewords: 'education');
-
-  print(education.reverseMethod());
+  String ucWord() {}
 }
