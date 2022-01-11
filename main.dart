@@ -1,39 +1,13 @@
-class Worker {
-  String? name;
-  String? surname;
-  int? rate;
-  int? days;
+import 'dart:ffi';
 
-  Worker({this.name, this.surname, this.days, this.rate});
-
-  num getSalary() {
-    final salary = (rate! * days!);
-    return salary;
+abstract class Exchange_rate {
+  Void calculateRate() {
+    print('');
   }
 }
 
-class MyString {
-  String? somewords;
-
-  MyString({this.somewords});
-
-   String reverseMethod() {
-    final input = somewords.split('').reversed.join();
-    return input;
-   
-}
-
-void main() {
-  Worker director =
-      Worker(name: 'Eldiyar', surname: 'Sultankulov', rate: 5000, days: 21);
-
-  Worker driver =
-      Worker(name: 'Rashid', surname: 'Bolotov', rate: 1000, days: 28);
-
-  print(director.getSalary());
-  print(driver.getSalary());
-
-  MyString education = MyString(somewords: 'education');
-
-  print(education.reverseMethod());
+class USD extends Exchange_rate {
+  int costUsdForSom;
+  num costSomForUsd;
+  USD(this.costUsdForSom, this.costSomForUsd);
 }
